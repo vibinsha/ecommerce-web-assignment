@@ -15,19 +15,14 @@
 <body>
     <header>
         <nav class="navigation">
-            <div class="logo"></div><img src = "logo.svg" alt="image" width="150px" /></div>
+            <div class="logo"><img src = "logo.svg" alt="image" width="150px" /></div>
             <ul class = "my-nav">
                 <li class="navList">Home</li>
                 <li class="navList">Products</li>
                 <li class="navList">Cart</li>
                 <li class="navList">About Us</li>
             </ul>
-            <ul class = "my-nav-mobile">
-                <li class="navList-mobile">Home</li>
-                <li class="navList-mobile">Products</li>
-                <li class="navList-mobile">Cart</li>
-                <li class="navList-mobile">About Us</li>
-            </ul>
+            
             <div class="hamburger-menu" id="hamburger">
                 <i class="fa fa-solid fa-bars"></i>
             </div>
@@ -41,7 +36,6 @@
     const navigation = document.querySelector(".navigation")
     hamburger.addEventListener('click', ()=>{
         myNav.classList.toggle('active')
-        myNavMobile.classList.toggle('active')
         navigation.classList.toggle('active')
     })
  

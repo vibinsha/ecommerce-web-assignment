@@ -1,6 +1,21 @@
-body{
-    margin: 0;
+a:link {
+    text-decoration: none;
 }
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+
 .navigation {
     width: 100%;
     height: 90px;
@@ -41,10 +56,43 @@ body{
 
 
 }
+html, body{
 
+    height: 100%;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex : 1;
+    display: flex;
+    justify-content: center;
+}
 
+.first-section{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+   padding: 20px;
+}
 
+.first-content{
+    margin-left: 10px;
+}
 
+.second-section{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.second-section iframe{
+
+}
+.second-content{
+    width: 85%;
+}
 
 .inter-navList {
   font-family: "Inter", serif;
@@ -61,6 +109,53 @@ body{
 .my-nav.active{
     display: flex;
 }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    background: radial-gradient(circle, #919CAD 45%, #34516C 100%);
+
+}
+.footer-logo{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.footer-elements{
+    display: flex;
+    gap: 6px;
+    padding-left: 10px;
+    flex: 1;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 10px;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: inter;
+}
+.footer-links a{
+    color: antiquewhite;
+}
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    color: white;
+    font-family: inter;
+}
+.footer-icon-container{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
 
 @media only screen and (max-width: 768px) {
     .navigation{

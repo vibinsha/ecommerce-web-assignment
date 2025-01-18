@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!---Setup for Font Inter from Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <!--Google Fonts-->
-<link rel="stylesheet" type="text/css" href="stylesheet.css" />
-<!--Setup for Font Awesome for the hamburger menu items-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8">
+ <!---Setup for Font Inter from Google Fonts-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   <!--Google Fonts-->
+ <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+ <!--Setup for Font Awesome for the hamburger menu items-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta charset="UTF-8">
+ 
+
 
 
     <title></title>
 </head>
 <body>
     <header>
+        <!--navigation bar start-->
         <nav class="navigation">
             <div class="logo"><img src = "logo.svg" alt="image" width="150px" /></div>
             <ul class = "my-nav">
@@ -30,7 +33,58 @@
                 <i class="fa fa-solid fa-bars"></i>
             </div>
         </nav>
+        <!--navigation bar end-->
     </header>
+    <main> <!--Website Content goes here -->
+        <div class="first-section">
+            <video src="video/video.mp4" width="500" class="intro-video" controls>
+                Sorry your browser does not support HTML5
+            </video>
+            <div class="first-content">
+                <h2>Where oppurtunity create success</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada odio leo, vitae porttitor massa vulputate et. Sed rhoncus a velit convallis porttitor. Fusce bibendum, mi vitae rutrum posuere, justo magna mattis nisl, a rhoncus libero turpis non odio. Aliquam mattis scelerisque neque. Donec consequat dictum risus vel rhoncus. Ut vehicula, elit semper molestie hendrerit, augue elit ultricies sem, vitae sodales enim odio ut tellus. Nullam consequat faucibus aliquam. Mauris consequat ullamcorper ante in cursus. Pellentesque vitae viverra nisl. Suspendisse eu erat purus.
+                </p>
+            </div>
+        </div>
+         <div class="second-section">
+            <div class="second-content">
+                <h2>Where oppurtunity create success</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada odio leo, vitae porttitor massa vulputate et. Sed rhoncus a velit convallis porttitor. Fusce bibendum, mi vitae rutrum posuere, justo magna mattis nisl, a rhoncus libero turpis non odio. Aliquam mattis scelerisque neque. Donec consequat dictum risus vel rhoncus. Ut vehicula, elit semper molestie hendrerit, augue elit ultricies sem, vitae sodales enim odio ut tellus. Nullam consequat faucibus aliquam. Mauris consequat ullamcorper ante in cursus. Pellentesque vitae viverra nisl. Suspendisse eu erat purus.
+                </p>
+            </div>
+            <iframe src="https://www.youtube.com/embed/EI_lco-qdw8" title="PRESTON" width="100%" height="300">
+    
+            </iframe>
+            
+        </div>   
+
+    </main>
+    <!--Footer-->
+    <footer>
+        <!--a div for logo-->
+        <div class="footer-logo">
+            <img src = "logo.svg" alt="image" width="150px" />
+        </div>
+        <!--div for links for T&C and ABOUT US-->
+        <div class="footer-elements">
+            <div class="footer-links">
+                <a href="#T&C">TERMS & CONDITIONS</a>
+                <a href="#ABOUT US">ABOUT US</a>
+            </div>
+            <!--div for copyright and socials-->
+        <div class="footer-socials">
+            <div class="footer-icon-container">
+                <i class="fa fa-brands fa-github"></i>
+                <i class="fa fa-brands fa-instagram"></i>
+                <i class="fa fa-solid fa-envelope"></i>
+            </div>
+            <p>All Rights Reserved to Vibinshah &copy; 2025</p>
+        </div>
+        </div>
+        
+    </footer>
     <script> 
     const hamburger = document.getElementById("hamburger")
     const myNav = document.querySelector(".my-nav")
@@ -44,4 +98,7 @@
  
     </script>
 </body>
+
+
+
 </html>

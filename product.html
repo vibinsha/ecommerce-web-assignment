@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="product.css" />
+</head>
+<header>
+    <!--navigation bar start-->
+    <nav class="navigation">
+        <div class="logo"><img src = "logo.svg" alt="image" width="150px" /></div>
+        <ul class = "my-nav">
+            <li class="navList">Home</li>
+            <li class="navList">Products</li>
+            <li class="navList">Cart</li>
+            <li class="navList">About Us</li>
+        </ul>
+        
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <!--navigation bar end-->
+</header>
+<body>
+    <main>
+        <div class="products-container"> <!--product container contains all the products irrespevtive of their category-->
+            <div class="category-tab">
+                <ul class="tabs">
+                    <li class="categories" id="all-products">All Products</li>
+                    <li class="categories" id="hoodies">Hoodies</li>
+                    <li class="categories" id="jumpers">Jumpers</li>
+                    <li class="categories" id="t-shirts">T-Shirts</li>
+                   
+                </ul>
+            </div>
+            <div class="product-list" id="product-list"></div>
+            <div class="product-card" id="product-card"> <!--product card contains all informations about the product along with the image-->
+                <div class="product-image">
+                    <img src="hoodie-sample.jpg" alt="product-image" class="product-img"/>
+                </div>
+                <div class="product-elements"><!-- all the details of the products-->
+                    <h4 class="product-name">Black Hoodie</h4>
+                    <a href="#" class="add-to-cart"><button class="cart-button">Add To Cart</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+    </main>
+<!--Footer-->
+<footer>
+    <!--a div for logo-->
+    <div class="footer-logo">
+        <img src = "logo.svg" alt="image" width="150px" />
+    </div>
+    <!--div for links for T&C and ABOUT US-->
+    <div class="footer-elements">
+        <div class="footer-links">
+            <a href="#T&C">TERMS & CONDITIONS</a>
+            <a href="#ABOUT US">ABOUT US</a>
+        </div>
+        <!--div for copyright and socials-->
+    <div class="footer-socials">
+        <div class="footer-icon-container">
+            <i class="fa fa-brands fa-github"></i>
+            <i class="fa fa-brands fa-instagram"></i>
+            <i class="fa fa-solid fa-envelope"></i>
+        </div>
+        <p>All Rights Reserved to Vibinsha &copy; 2025</p>
+    </div>
+    </div>
+    
+</footer>
+<script> 
+const hamburger = document.getElementById("hamburger")
+const myNav = document.querySelector(".my-nav")
+const myNavMobile = document.querySelector(".my-nav-mobile")
+
+const navigation = document.querySelector(".navigation")
+hamburger.addEventListener('click', ()=>{
+    myNav.classList.toggle('active')
+    navigation.classList.toggle('active')
+})
+
+
+var hoodies = [
+['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (1).jpg'],
+['UCLan Hoodie (2)','Light Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (2).jpg'],
+['UCLan Hoodie (3)','Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (3).jpg'],
+];
+
+var jumpers = [
+['UCLan Logo Jumper','Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (1).jpg'],
+['UCLan Logo Jumper','Rusty Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (2).jpg'],
+['UCLan Logo Jumper','Water Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (3).jpg'],
+]
+
+var tshirts = [
+['UCLan Logo Tshirt','Navy Blue New','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirts/tshirt (1).jpg'],
+['UCLan Logo Tshirt','Rusty Red New','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirts/tshirt (2).jpg'],
+['UCLan Logo Tshirt','Burgundy','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirts/tshirt (3).jpg'],
+]
+
+var allProducts = [
+['UCLan Hoodie (1)','Purple','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (1).jpg'],
+['UCLan Hoodie (2)','Light Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (2).jpg'],
+['UCLan Hoodie (3)','Green','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' £39.99','images/hoodies/hoodie (3).jpg'],
+['UCLan Logo Jumper','Purple','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (1).jpg'],
+['UCLan Logo Jumper','Rusty Red','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (2).jpg'],
+['UCLan Logo Jumper','Water Blue','cotton authentic character and practicality are combined in this winter jumper for students that goes with everything to create casual looks',' £29.99','images/jumpers/jumper (3).jpg'],
+['UCLan Logo Tshirt','Navy Blue New','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirts/tshirt (1).jpg'],
+['UCLan Logo Tshirt','Rusty Red New','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirts/tshirt (2).jpg'],
+['UCLan Logo Tshirt','Burgundy','cotton authentic character and practicality are combined in this summery t-shirt for students that goes with everything to create casual looks. Perfect for those summer days',' £19.99','images/tshirts/tshirt (3).jpg'],
+]
+
+const product_list = document.getElementById('product-list');
+const product_card = document.getElementById('product-card');
+
+function ShowProducts(categories) {
+    for(i=0; i<categories.length; i++){
+        let CopyofItem = product_card.cloneNode(true);
+        // product_list.appendChild(CopyofItem);
+        var value = "product"+i;
+        product_card.id = value;
+
+        CopyofItem.querySelector(".product-img").src = categories[i][4];
+        CopyofItem.querySelector(".product-name").innerHTML = categories[i][0];
+
+        product_list.appendChild(CopyofItem);
+    }
+
+
+
+}
+
+ShowProducts(allProducts);
+</script>
+</body>
+
+
+
+</html>
